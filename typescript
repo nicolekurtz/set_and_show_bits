@@ -1,0 +1,36 @@
+Script started on 2021-04-25 13:39:08-07:00 [TERM="xterm-256color" TTY="/dev/pts/23" COLUMNS="145" LINES="40"]
+nkurtz@ada:~/cs201/hw2$ make
+gcc   setBits.c -o setBits
+[01m[KsetBits.c:[m[K In function ‘[01m[Kprint_bits[m[K’:
+[01m[KsetBits.c:47:5:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kerror[m[K’; did you mean ‘[01m[Kperror[m[K’? [[01;35m[K-Wimplicit-function-declaration[m[K]
+   47 |     [01;35m[Kerror[m[K(EXIT_FAILURE, 0, "Input error");
+      |     [01;35m[K^~~~~[m[K
+      |     [32m[Kperror[m[K
+nkurtz@ada:~/cs201/hw2$ ./setBits 2 3 16 3 18
+./setBits: Error: Numbers must be between 0-15
+nkurtz@ada:~/cs201/hw2$ ./setBits 2 3 4
+0000 0000 0001 1100
+
+nkurtz@ada:~/cs201/hw2$ ./setBits 3 13 8 14 15
+1110 0001 0000 1000
+
+nkurtz@ada:~/cs201/hw2$ ./showBits 
+./showBits: Error: please enter 2 hexadecimals as arguments to the program
+nkurtz@ada:~/cs201/hw2$ ./showBits 0xD49157FF
+./showBits: Error: please enter 2 hexadecimals as arguments to the program
+nkurtz@ada:~/cs201/hw2$ ./showBits 0xE0C874A3 0xD49157FF
+Bits 0, 1, 5, 7, 10, 12, 14, 23, 30, 31, in common.
+Hexadecimal: c08054a3
+Signed: -1065331549
+unsigned: 3229635747
+
+nkurtz@ada:~/cs201/hw2$ ./showBits 0x0F 0x05
+Bits 0, 2, in common.
+Hexadecimal: 5
+Signed: 5
+unsigned: 5
+
+nkurtz@ada:~/cs201/hw2$ exit
+exit
+
+Script done on 2021-04-25 13:41:06-07:00 [COMMAND_EXIT_CODE="0"]
